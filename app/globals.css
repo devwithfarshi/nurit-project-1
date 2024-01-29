@@ -13,6 +13,10 @@ font-family: 'Roboto', sans-serif; */
 /* Red : #FF5D5D */
 /* dark : #383838 */
 /* light-dark : #33333385 */
+/* footer-light-dark : #33333380 */
+/* Gray : #757575 */
+/* Placeholder : #9B9B9B */
+/* Navitems : #4D4D4D */
 
 * {
   margin: 0;
@@ -23,3 +27,29 @@ font-family: 'Roboto', sans-serif; */
 *::after {
   box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+/*Start Reuseable CSS */
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+/* Container of website */
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+/*END Reuseable CSS */
