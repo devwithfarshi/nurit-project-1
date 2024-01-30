@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500&display=swap");
 
 /* Font families */
@@ -21,11 +24,22 @@ font-family: 'Roboto', sans-serif; */
 * {
   margin: 0;
   padding: 0;
+  /* outline: 1px solid; */
 }
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+:root {
+  --primary: #0970cd;
+  --secondary: #0198e9;
+  --red: #ff5d5d;
+  --dark: #383838;
+  --light-dark: rgba(51, 51, 51, 0.85);
+  --footer-light-dark: #33333380;
+  --gray: #757575;
 }
 
 html {
@@ -46,10 +60,117 @@ ol {
   list-style: none;
 }
 
-/* Container of website */
-.container {
-  max-width: 144rem;
-  margin: 0 auto;
+/*END Reuseable CSS */
+
+/* Additional CSS */
+
+/* NavBar css */
+.main_header {
+  font-family: "Poppins", sans-serif;
+}
+.search_input_box {
+  input {
+    border: 0.1rem solid #f1f1f1;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #9b9b9b;
+    border-radius: 0.5rem 0 0 0.5rem;
+    &::placeholder {
+      font-family: "Poppins", sans-serif;
+    }
+  }
+
+  .search_icon {
+    border-radius: 0 0.5rem 0.5rem 0;
+    color: #ffffff;
+  }
+}
+nav .nav_actions {
+  p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.5%;
+    color: #29292e;
+  }
+  .cart_item_couter {
+    line-height: 2rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
 }
 
-/*END Reuseable CSS */
+ul.navMenu {
+  li {
+    a {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--light-dark);
+      text-transform: uppercase;
+    }
+
+    /* DropDown */
+    .navbarDropDown {
+      font-family: "Poppins", sans-serif;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      visibility: hidden;
+      /* opacity: 0; */
+      z-index: 10;
+      transition: all 350ms linear;
+
+      ul {
+        li {
+          &:first-child {
+            a {
+              font-size: 1.6rem;
+              font-weight: 500;
+              color: #3d3d3d;
+            }
+            margin-bottom: 0.2rem;
+          }
+          a {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--gray);
+            text-transform: capitalize;
+          }
+          margin-bottom: 0.6rem;
+        }
+      }
+    }
+    &:hover .navbarDropDown {
+      visibility: visible;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .mobile_nav {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-template-areas:
+      "l a"
+      "s s";
+    .logo {
+      grid-area: l;
+    }
+    .nav_actions_group {
+      grid-area: a;
+    }
+    .search_input_box {
+      grid-area: s;
+      margin: 0 auto;
+      margin-top: 1rem;
+    }
+  }
+
+  ul.navMenu {
+    li {
+      a {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

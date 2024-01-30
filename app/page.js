@@ -1,7 +1,11 @@
+"use client";
+import Navbar from "./components/Navbar";
+
 export default function Home() {
   return (
-    <h1>
-      Let&apos;s start <span className="uppercase italic"> nur it project</span>
-    </h1>
+    <>
+      <Navbar />
+      <h1>home seu</h1>
+    </>
   );
 }
