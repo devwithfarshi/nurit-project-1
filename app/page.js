@@ -1,11 +1,13 @@
-"use client";
-import Navbar from "./components/Navbar";
+import HomeBanner from "./components/HomeBanner";
+import HomeCategory from "./components/HomeCategory";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <h1>home seu</h1>
+      <section className="container sm:p-0 pt-[1.3rem] px-[2rem]">
+        <HomeBanner />
+        <HomeCategory />
+      </section>
     </>
   );
 }

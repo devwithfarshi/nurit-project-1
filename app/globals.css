@@ -59,7 +59,13 @@ ul,
 ol {
   list-style: none;
 }
-
+.common_heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: var(--dark);
+  text-transform: capitalize;
+}
 /*END Reuseable CSS */
 
 /* Additional CSS */
@@ -68,22 +74,38 @@ ol {
 .main_header {
   font-family: "Poppins", sans-serif;
 }
-.search_input_box {
-  input {
-    border: 0.1rem solid #f1f1f1;
-    font-weight: 400;
-    font-size: 1.6rem;
-    color: #9b9b9b;
-    border-radius: 0.5rem 0 0 0.5rem;
-    &::placeholder {
-      font-family: "Poppins", sans-serif;
-    }
+.navbarWrapper {
+  display: grid;
+  grid-template: 1fr / repeat(12, 1fr);
+  grid-template-areas: "l l s s s s s s . a a a a";
+
+  .logo {
+    grid-area: l;
   }
 
-  .search_icon {
-    border-radius: 0 0.5rem 0.5rem 0;
-    color: #ffffff;
+  .search_input_box {
+    grid-area: s;
+    input {
+      width: 100%;
+      padding: 1.3rem 2rem;
+      border: 0.1rem solid #f1f1f1;
+      font-weight: 400;
+      font-size: 1.6rem;
+      color: #9b9b9b;
+      border-radius: 0.5rem 0 0 0.5rem;
+      &::placeholder {
+        font-family: "Poppins", sans-serif;
+      }
+    }
+
+    .search_icon {
+      border-radius: 0 0.5rem 0.5rem 0;
+      color: #ffffff;
+    }
   }
+}
+nav .nav_actions_group {
+  grid-area: a;
 }
 nav .nav_actions {
   p {
@@ -147,22 +169,20 @@ ul.navMenu {
 }
 
 @media (max-width: 640px) {
-  .mobile_nav {
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  .navbarWrapper {
+    grid-template: 2fr / repeat(2, 1fr);
     grid-template-areas:
       "l a"
       "s s";
-    .logo {
-      grid-area: l;
-    }
+    justify-content: space-between;
     .nav_actions_group {
-      grid-area: a;
+      margin-left: auto;
     }
     .search_input_box {
       grid-area: s;
-      margin: 0 auto;
-      margin-top: 1rem;
+      input {
+        padding: 0.8rem 1.3rem;
+      }
     }
   }
 
@@ -170,6 +190,110 @@ ul.navMenu {
     li {
       a {
         font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+/* Home start  */
+
+.home_banner_wrapper {
+  display: grid;
+  grid-template: 1fr / repeat(12, 1fr);
+  grid-template-areas: "f f f f f f f f t t t t";
+  .home_slider {
+    grid-area: f;
+    position: relative;
+    .banner_heading_box {
+      position: absolute;
+      top: 50%;
+      left: 5.696rem;
+      transform: translateY(-50%);
+      h1 {
+        font-size: 4.5rem;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;
+        width: 37.565rem;
+        color: var(--primary);
+      }
+      p {
+        font-family: "Poppins", sans-serif;
+        font-size: 2rem;
+        color: #646464;
+        font-weight: 400;
+        line-height: 4rem;
+        width: 41.77rem;
+        margin-bottom: 2.764rem;
+        margin-top: 4.6rem;
+      }
+      button.shop_now_btn {
+        background-color: var(--secondary);
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+
+        padding: 1rem 2.5rem;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: 600;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+  .banner_right_part {
+    grid-area: t;
+    .banner_image_three {
+      margin-top: 2.8rem;
+    }
+    .banner_image_three,
+    .banner_image_two {
+      position: relative;
+      img {
+        border-radius: 1rem;
+      }
+      button.banner_btn {
+        padding: 1.6rem 3.2rem;
+        color: var(--secondary);
+        font-weight: 600;
+        font-size: 2rem;
+        font-family: "Montserrat", sans-serif;
+        background-color: rgba(250, 250, 250, 0.8);
+        border-radius: 0.5rem;
+        position: absolute;
+        bottom: 1.838rem;
+        left: 50%;
+        transform: translateX(-50%);
+        &.banner_btn_one {
+          width: 26.8rem;
+        }
+        &.banner_btn_two {
+          width: 35.2rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 640px) {
+  .home_banner_wrapper {
+    grid-template-areas: "f f f f f f f f f f f f";
+    .home_slider {
+      .banner_heading_box {
+        left: 2.1rem;
+        h1 {
+          font-size: 2rem;
+          font-weight: 700;
+          width: 18rem;
+        }
+        p {
+          font-size: 1.2rem;
+          line-height: 2rem;
+          width: 15.4rem;
+          margin-bottom: 1.2rem;
+          margin-top: 1rem;
+        }
+        button.shop_now_btn {
+          padding: 0.5rem 1.6rem;
+          font-size: 1.2rem;
+        }
       }
     }
   }

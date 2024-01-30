@@ -15,9 +15,6 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: {
-        sm: "20px",
-      },
       screens: {
         sm: "600px",
         md: "728px",
