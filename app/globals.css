@@ -65,6 +65,9 @@ ol {
   font-weight: 500;
   color: var(--dark);
   text-transform: capitalize;
+  @media (max-width: 620px) {
+    font-size: 1.6rem;
+  }
 }
 /*END Reuseable CSS */
 
@@ -195,8 +198,13 @@ ul.navMenu {
   }
 }
 
+.showMore_btn {
+  border-radius: 8.1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
 /* Home start  */
-
 .home_banner_wrapper {
   display: grid;
   grid-template: 1fr / repeat(12, 1fr);
@@ -237,6 +245,16 @@ ul.navMenu {
         font-weight: 600;
         border-radius: 0.5rem;
       }
+    }
+    .carousel .control-dots .dot {
+      background-color: #fff;
+      box-shadow: none;
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+    .carousel .control-dots .dot.selected,
+    .carousel .control-dots .dot:hover {
+      background-color: var(--secondary);
     }
   }
   .banner_right_part {
@@ -279,6 +297,8 @@ ul.navMenu {
     .home_slider {
       .banner_heading_box {
         left: 2.1rem;
+        top: 40%;
+
         h1 {
           font-size: 2rem;
           font-weight: 700;
@@ -297,6 +317,11 @@ ul.navMenu {
         }
       }
     }
+  }
+  .carousel .control-dots .dot {
+    width: 0.8rem !important;
+    height: 0.8rem !important;
+    margin-left: 0.7rem !important;
   }
 }
 
@@ -368,7 +393,7 @@ ul.navMenu {
 /* single product */
 
 .single_product_wrapper {
-  width: 33.2rem;
+  flex-basis: 33.2rem;
   font-family: "Poppins", sans-serif;
   padding: 0.87rem 0.986rem 1.522rem 0.986rem;
   border: 0.1rem solid #e9e9e9;
@@ -394,16 +419,43 @@ ul.navMenu {
       left: 0;
     }
   }
-  .product_titile {
+  .product_title {
     color: var(--dark);
     font-size: 1.8rem;
     line-height: 2.16rem;
     font-weight: 400;
     width: 29.4rem;
+    margin: 1rem 0;
   }
   p.price_tag {
     color: var(--primary);
     font-size: 2.2rem;
     font-weight: 500;
+  }
+}
+
+@media (max-width: 620px) {
+  /* Proeducs wrapper */
+  .product_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+  }
+  .single_product_wrapper {
+    width: 18.6rem;
+    padding: 0.5rem;
+    padding-bottom: 1.4rem;
+    figcaption {
+      width: 5rem !important;
+      padding: 0.24rem 0.649rem !important;
+      font-size: 0.8rem !important;
+    }
+    .product_title {
+      font-size: 1.4rem;
+      width: 16.5rem;
+      margin: 0.8rem 0;
+    }
+    p.price_tag {
+      font-size: 1.6rem;
+    }
   }
 }

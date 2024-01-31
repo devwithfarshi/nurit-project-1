@@ -54,14 +54,13 @@ const SingleProduct = ({
         {/* <FaStar color="#D3D3D3" fontSize={"1.6rem"} /> */}
         <span className="reviews_couter">(0)</span>
       </div>
-      <p className="product_titile my-[1rem]">{title}</p>
-      <div className="flex items-center">
+      <p className="product_title ">{title}</p>
+      <div className="flex items-center justify-between">
         <p className="price_tag text-primary flex items-center">
           <FaBangladeshiTakaSign />
           <span>{price}</span>
         </p>
         <Image
-          className="ml-auto"
           src={"/images/icons/addToCartIcon.svg"}
           alt="Add To Cart"
           width={24}

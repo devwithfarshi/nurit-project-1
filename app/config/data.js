@@ -24,7 +24,7 @@ export const productArray = [
     image: "/images/products/product3.png",
   },
   {
-    id: 1,
+    id: 4,
     wishList: false,
     title: "Headrest Executive Mesh Office Chair set",
     price: 10500,

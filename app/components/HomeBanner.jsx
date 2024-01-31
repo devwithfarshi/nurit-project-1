@@ -1,18 +1,46 @@
 "use client";
 
 import Image from "next/image";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const HomeBanner = () => {
   return (
     <>
       <main className="home_banner_wrapper ">
         <div className="home_slider">
-          <Image
-            src={"/images/heroImage.png"}
-            alt="Delivery hero"
-            width={925.17}
-            height={563.55}
-          />
+          <Carousel
+            autoPlay
+            // autoPlay={false}
+            infiniteLoop
+            showStatus={false}
+            showArrows={false}
+          >
+            <Image
+              src={"/images/heroImage.png"}
+              alt="Delivery hero"
+              width={925.17}
+              height={563.55}
+            />
+            <Image
+              src={"/images/heroImage.png"}
+              alt="Delivery hero"
+              width={925.17}
+              height={563.55}
+            />
+            <Image
+              src={"/images/heroImage.png"}
+              alt="Delivery hero"
+              width={925.17}
+              height={563.55}
+            />
+            <Image
+              src={"/images/heroImage.png"}
+              alt="Delivery hero"
+              width={925.17}
+              height={563.55}
+            />
+          </Carousel>
           <div className="banner_heading_box">
             <h1>Explore Men&apos;s Winter Collection</h1>
             <p>
