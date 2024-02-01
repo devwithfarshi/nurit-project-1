@@ -11,7 +11,7 @@ export default function Home() {
         <HomeBanner />
         <HomeCategory />
         <ProductLists produtcsArray={productArray} heading={"Flash Deals"} />
-        <ProductLists
+        {/* <ProductLists
           produtcsArray={[
             ...productArray,
             ...productArray.reverse(),
@@ -20,7 +20,7 @@ export default function Home() {
             ...productArray.reverse(),
           ]}
           heading={"Featured Product"}
-        />
+        /> */}
         <button className="uppercase bg-[#34ADED] px-[2.5rem] py-[.9rem] text-[#fff] flex items-center showMore_btn mx-[auto] my-[4rem]">
           <span>show more</span>
           <MdKeyboardArrowDown className="ml-[.4rem]" fontSize={24} />

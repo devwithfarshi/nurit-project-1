@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { FaChevronRight } from "react-icons/fa6";
 
 const HomeCategory = () => {
   const categories = [
@@ -82,22 +83,11 @@ const HomeCategory = () => {
                   height={0}
                 />
                 <p>{categorie.title}</p>
-                <svg
+                <FaChevronRight
                   className="rightStroke_icon"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.08337 4.16671L12.9167 10L7.08337 15.8334"
-                    stroke="#999999"
-                    stroke-width="1.75"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                  fontSize={11}
+                  fill="#999999"
+                />
               </li>
             </>
           ))}
