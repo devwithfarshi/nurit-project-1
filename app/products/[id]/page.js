@@ -1,7 +1,13 @@
-import React from "react";
+import ProdtctDetails from "@/app/components/ProdtctDetails";
 
-const SingleProduct = () => {
-  return <div>SingleProduct</div>;
+const SingleProductPage = () => {
+  return (
+    <>
+      <section className="container sm:p-0 pt-[1.3rem] px-[2rem]">
+        <ProdtctDetails />
+      </section>
+    </>
+  );
 };
 
-export default SingleProduct;
+export default SingleProductPage;

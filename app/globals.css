@@ -24,7 +24,6 @@ font-family: 'Roboto', sans-serif; */
 * {
   margin: 0;
   padding: 0;
-  /* outline: 1px solid; */
 }
 *,
 *::before,
@@ -78,6 +77,8 @@ ol {
 /* NavBar css */
 .main_header {
   font-family: "Poppins", sans-serif;
+
+  border-bottom: 0.15rem solid #efeeee;
 }
 .navbarWrapper {
   display: grid;
@@ -128,52 +129,57 @@ nav .nav_actions {
 }
 
 ul.navMenu {
+  position: relative;
+
   li {
-    a {
-      font-size: 1.6rem;
-      font-weight: 500;
-      color: var(--light-dark);
-      text-transform: uppercase;
-    }
-
-    /* DropDown */
-    .navbarDropDown {
-      font-family: "Poppins", sans-serif;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      visibility: hidden;
-      /* opacity: 0; */
-      z-index: 10;
-      transition: all 350ms linear;
-
-      ul {
-        li {
-          &:first-child {
-            a {
-              font-size: 1.6rem;
-              font-weight: 500;
-              color: #3d3d3d;
-            }
-            margin-bottom: 0.2rem;
-          }
-          a {
-            font-size: 1.4rem;
-            font-weight: 400;
-            color: var(--gray);
-            text-transform: capitalize;
-          }
-          margin-bottom: 0.6rem;
-        }
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--light-dark);
+    text-transform: uppercase;
+    &:hover {
+      .navbarDropDown {
+        top: 110%;
+        visibility: visible;
+        opacity: 1;
       }
-    }
-    &:hover .navbarDropDown {
-      visibility: visible;
     }
   }
 }
 
-@media (max-width: 640px) {
+/* DropDown */
+.navbarDropDown {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+  transition: all 100ms ease-in-out;
+
+  ul {
+    li {
+      &:first-child {
+        a {
+          font-size: 1.6rem;
+          font-weight: 500;
+          color: #3d3d3d;
+        }
+        margin-bottom: 0.2rem;
+      }
+      a {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--gray);
+        text-transform: capitalize;
+      }
+      margin-bottom: 0.6rem;
+    }
+  }
+}
+
+@media (max-width: 900px) {
   .navbarWrapper {
     grid-template: 2fr / repeat(2, 1fr);
     grid-template-areas:
@@ -192,10 +198,14 @@ ul.navMenu {
   }
 
   ul.navMenu {
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     li {
-      a {
-        font-size: 1.4rem;
-      }
+      font-size: 1.4rem;
+      margin-right: 2rem;
+      border: 1px solid;
     }
   }
 }
@@ -208,6 +218,7 @@ ul.navMenu {
 }
 /* Home start  */
 .home_banner_wrapper {
+  padding: 1.3rem 0;
   display: grid;
   grid-template: 1fr / repeat(12, 1fr);
   grid-template-areas: "f f f f f f f f t t t t";
@@ -293,7 +304,7 @@ ul.navMenu {
     }
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .home_banner_wrapper {
     grid-template-areas: "f f f f f f f f f f f f";
     .home_slider {
@@ -353,7 +364,7 @@ ul.navMenu {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .category_wrapper {
     ul {
       grid-template-columns: repeat(2, 1fr);
@@ -388,7 +399,10 @@ ul.navMenu {
 /* Proeducs wrapper */
 .product_wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  &.all_product_wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
   gap: 2.5rem;
 }
 

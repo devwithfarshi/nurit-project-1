@@ -20,6 +20,7 @@ const AllProducts = () => {
         </div>
       </header>
       <ProductWrapper
+        allProduct={true}
         produtcsArray={[
           ...productArray,
           ...productArray.reverse(),

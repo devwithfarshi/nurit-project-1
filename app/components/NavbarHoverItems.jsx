@@ -1,10 +1,10 @@
 import React from "react";
 
-const NavbarHoverItems = ({ visible }) => {
+const NavbarHoverItems = () => {
   return (
     <>
       <main
-        className={`px-[7.1rem] pt-[3rem] pb-[2.6rem]  justify-between container navbarDropDown  flex`}
+        className={`px-[7.1rem]  pt-[3rem] pb-[2.6rem]  justify-between container navbarDropDown  flex`}
       >
         <ul>
           <li>

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import logo from "@/public/images/logo.png";
-import { FaMagnifyingGlass } from "react-icons/fa6";
+import { FaMagnifyingGlass, FaAngleRight } from "react-icons/fa6";
 
 import loginIcon from "../../public/images/icons/ProfileuserIcon.svg";
 import wishlistIcon from "../../public/images/icons/heartIcon.svg";
@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <>
       <header className="sm:pt-[3.3rem] pt-[.5rem] pb-[.7rem] main_header">
-        <section className="container sm:p-0 px-[2rem]">
+        <section className="navbarSections container sm:p-0 px-[2rem]">
           <nav className="navbarWrapper">
             <Link className="logo" href={"/"}>
               <Image src={logo} alt="Project Logo" />
@@ -45,29 +45,36 @@ const Navbar = () => {
               </div>
             </div>
           </nav>
-          {/* <ul className="navMenu flex sm:justify-around pt-[3.4rem] relative">
+          <ul className="navMenu flex justify-around items-center pt-[3.4rem] ">
             <li>
-              <a href="#">Women&apos;s Fashion</a>
+              <a href="#">Women&apos;s&nbsp;Fashion</a>
+              <NavbarHoverItems />
             </li>
             <li>
-              <a href="#">men&apos;s Fashion</a>
+              <a href="#">men&apos;s&nbsp;Fashion</a>
+              <NavbarHoverItems />
             </li>
             <li>
-              <a href="#">Kid&apos;s Fashion</a>
+              <a href="#">Kid&apos;s&nbsp;Fashion</a>
+              <NavbarHoverItems />
             </li>
             <li>
-              <a href="#">Home & Lifestyle</a>
+              <a href="#">Home&nbsp;&&nbsp;Lifestyle </a>
+              <NavbarHoverItems />
             </li>
             <li>
-              <a href="#">Arts & Crafts</a>
+              <a href="#">Arts&nbsp;&&nbsp;Crafts</a>
+              <NavbarHoverItems />
             </li>
             <li>
-              <a href="#">Computer & Electronics</a>
+              <a href="#">Computer&nbsp;&&nbsp;Electronics</a>
+              <NavbarHoverItems />
             </li>
             <li>
-              <a href="#">Food & Grocery</a>
+              <a href="#">Food&nbsp&&nbsp;Grocery</a>
+              <NavbarHoverItems />
             </li>
-          </ul> */}
+          </ul>
         </section>
       </header>
     </>
