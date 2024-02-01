@@ -15,7 +15,7 @@ const SingleProduct = ({
 }) => {
   const [wishList, setWishList] = useState(bookMark);
   return (
-    <li className="single_product_wrapper relative">
+    <li className="single_product_wrapper relative ">
       <figure>
         <Image
           src={image}

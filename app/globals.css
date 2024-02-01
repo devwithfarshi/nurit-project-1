@@ -67,7 +67,7 @@ ol {
   font-weight: 500;
   color: var(--dark);
   text-transform: capitalize;
-  @media (max-width: 620px) {
+  @media (max-width: 900px) {
     font-size: 1.6rem;
   }
 }
@@ -388,7 +388,7 @@ ul.navMenu {
 /* Proeducs wrapper */
 .product_wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
 }
 
@@ -435,7 +435,7 @@ ul.navMenu {
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 900px) {
   /* Proeducs wrapper */
   .product_wrapper {
     grid-template-columns: repeat(2, 49%);
@@ -572,7 +572,7 @@ footer {
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 900px) {
   #shipping_icon {
     font-size: 4rem;
   }

@@ -3,6 +3,7 @@ import HomeBanner from "./components/HomeBanner";
 import HomeCategory from "./components/HomeCategory";
 import { productArray } from "./config/data";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -21,10 +22,13 @@ export default function Home() {
           ]}
           heading={"Featured Product"}
         /> */}
-        <button className="uppercase bg-[#34ADED] px-[2.5rem] py-[.9rem] text-[#fff] flex items-center showMore_btn mx-[auto] my-[4rem]">
+        <Link
+          href="products"
+          className="uppercase bg-[#34ADED] px-[2.5rem] py-[.9rem] text-[#fff] flex items-center showMore_btn my-[4rem] w-fit mx-auto "
+        >
           <span>show more</span>
           <MdKeyboardArrowDown className="ml-[.4rem]" fontSize={24} />
-        </button>
+        </Link>
       </section>
     </>
   );

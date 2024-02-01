@@ -8,14 +8,8 @@ const HomeBanner = () => {
   return (
     <>
       <main className="home_banner_wrapper ">
-        <div className="home_slider">
-          <Carousel
-            autoPlay
-            // autoPlay={false}
-            infiniteLoop
-            showStatus={false}
-            showArrows={false}
-          >
+        <div className="home_slider w-[80vw]">
+          <Carousel autoPlay infiniteLoop showStatus={false} showArrows={false}>
             <Image
               src={"/images/heroImage.png"}
               alt="Delivery hero"
