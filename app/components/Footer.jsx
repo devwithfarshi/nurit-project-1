@@ -107,7 +107,7 @@ const Footer = () => {
                 <div className="flex items-center gap-[2.7rem]  ">
                   <FaHeadset fontSize={48} fill="#8D8D8D" />
                   <div className="call_info">
-                    <span>Have any question</span>
+                    <span>Have any question?</span>
                     <h6 className="text-secondary">099 456 789</h6>
                   </div>
                 </div>

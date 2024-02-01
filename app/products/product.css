@@ -1,0 +1,17 @@
+.first_filterBy {
+  font-family: "Poppins", sans-serif;
+  h5 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #3d3d3f;
+  }
+  .category_main_list {
+    li.main_category {
+      text-transform: capitalize;
+      color: #757575;
+      list-style: disc;
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+  }
+}
