@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -41,7 +42,9 @@ const HomeBanner = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor.
             </p>
-            <button className="shop_now_btn">shop now</button>
+            <Link href={"/products"} className="shop_now_btn">
+              shop now
+            </Link>
           </div>
         </div>
         <div className="banner_right_part sm:block hidden">

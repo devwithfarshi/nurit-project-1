@@ -249,7 +249,7 @@ ul.navMenu {
         margin-bottom: 2.764rem;
         margin-top: 4.6rem;
       }
-      button.shop_now_btn {
+      .shop_now_btn {
         background-color: var(--secondary);
         color: #ffffff;
         font-family: "Poppins", sans-serif;
