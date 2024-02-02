@@ -46,8 +46,8 @@
     width: 100%;
     height: 0.6rem;
     border-radius: 0.5rem;
-    background-color: var(--secondary);
-
+    background-color: #d0d0d2;
+    overflow: hidden;
     &::-webkit-slider-thumb {
       appearance: none;
       background: #fafafa;
@@ -55,7 +55,8 @@
       height: 2.4rem;
       width: 2.4rem;
       border-radius: 50%;
-      box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+
+      box-shadow: -40rem 0 0 40rem var(--secondary);
     }
   }
   .price_range_text {

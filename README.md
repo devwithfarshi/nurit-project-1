@@ -7,6 +7,7 @@ This is an e-commerce website design template crafted as a faithful replica of a
 - Home Page is responsive
 - Product page and Single Product is not responsive
 - Hover over nav items to open the mega menu.
+- This website has three routes "/" , "/products" , "/products/id"
 
 ## Live link
 

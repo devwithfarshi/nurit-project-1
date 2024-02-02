@@ -62,7 +62,13 @@ const FilterWrapper = () => {
             }`}
           >
             <div className="overflow-hidden">
-              <input type="range" className="price_range my-[3rem]" />
+              <input
+                type="range"
+                // value={100}
+                min={100}
+                max={1000}
+                className="price_range my-[3rem]"
+              />
               <p className="price_range_text flex items-center">
                 <span>Price:</span>
                 <span className="flex items-center text-[#383838]">
