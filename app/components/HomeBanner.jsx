@@ -8,7 +8,7 @@ const HomeBanner = () => {
   return (
     <>
       <main className="home_banner_wrapper ">
-        <div className="home_slider sm:w-auto w-[80vw]">
+        <div className="home_slider">
           <Carousel autoPlay infiniteLoop showStatus={false} showArrows={false}>
             <Image
               src={"/images/heroImage.png"}
@@ -39,7 +39,7 @@ const HomeBanner = () => {
             <h1>Explore Men&apos;s Winter Collection</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.{" "}
+              eiusmod tempor.
             </p>
             <button className="shop_now_btn">shop now</button>
           </div>

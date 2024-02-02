@@ -309,16 +309,15 @@ ul.navMenu {
       .banner_heading_box {
         left: 2.1rem;
         top: 40%;
-
         h1 {
-          font-size: 2rem;
+          font-size: 1.8rem;
           font-weight: 700;
           width: 18rem;
         }
         p {
           font-size: 1.2rem;
           line-height: 2rem;
-          width: 15.4rem;
+          width: 18.4rem;
           margin-bottom: 1.2rem;
           margin-top: 1rem;
         }

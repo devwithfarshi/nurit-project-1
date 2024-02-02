@@ -45,7 +45,7 @@ const Navbar = () => {
               </div>
             </div>
           </nav>
-          <ul className="navMenu flex justify-around items-center pt-[3.4rem] ">
+          <ul className="navMenu flex sm:justify-around items-center pt-[3.4rem] ">
             <li>
               <a href="#">Women&apos;s&nbsp;Fashion</a>
               <NavbarHoverItems />
