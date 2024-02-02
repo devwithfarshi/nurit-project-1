@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 
 const ReviewForm = () => {
+  const [rating, setRating] = useState(0);
   return (
     <>
       <main className="review_form_wrapper px-[4.7rem]  py-[4rem] bg-[#FCFCFC]">
@@ -25,11 +27,29 @@ const ReviewForm = () => {
           </div>
           <div className="ratting flex mt-[1.5rem] gap-[.4rem] items-center">
             <span className="mr-[.4rem]">Rating</span>
-            <FaStar color="#FFB340" fontSize={25} />
-            <FaStar color="#FFB340" fontSize={25} />
-            <FaStar color="#FFB340" fontSize={25} />
-            <FaStar color="#FFB340" fontSize={25} />
-            <FaStar color="#A7A7A7" fontSize={25} />
+            {[...Array(5)].map((start, index) => {
+              const currentStar = index + 1;
+              return (
+                <>
+                  <label
+                    onClick={() => {
+                      setRating(currentStar);
+                    }}
+                  >
+                    {rating >= currentStar ? (
+                      <FaStar
+                        className="cursor-pointer"
+                        key={index + 1}
+                        color="#FFB340"
+                        fontSize={25}
+                      />
+                    ) : (
+                      <FaStar color="#A7A7A7" fontSize={25} />
+                    )}
+                  </label>
+                </>
+              );
+            })}
           </div>
           <button type="submit" className="submit_btn">
             Submit
