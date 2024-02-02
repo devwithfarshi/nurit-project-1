@@ -12,16 +12,15 @@ export default function Home() {
         <HomeBanner />
         <HomeCategory />
         <ProductLists produtcsArray={productArray} heading={"Flash Deals"} />
-        {/* <ProductLists
+        <ProductLists
           produtcsArray={[
             ...productArray,
-            ...productArray.reverse(),
             ...productArray.reverse(),
             ...productArray,
             ...productArray.reverse(),
           ]}
           heading={"Featured Product"}
-        /> */}
+        />
         <Link
           href="products"
           className="uppercase bg-[#34ADED] px-[2.5rem] py-[.9rem] text-[#fff] flex items-center showMore_btn my-[4rem] w-fit mx-auto "
