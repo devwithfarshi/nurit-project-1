@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500&display=swap");
 
 /* Font families */
 /* font-family: 'Lato', sans-serif;
@@ -117,8 +117,7 @@ nav .nav_actions {
   p {
     font-size: 1.6rem;
     font-weight: 400;
-    letter-spacing: 0.5%;
-    color: #29292e;
+    color: #4d4d4d;
   }
   .cart_item_couter {
     line-height: 2rem;
@@ -205,7 +204,6 @@ ul.navMenu {
     li {
       font-size: 1.4rem;
       margin-right: 2rem;
-      border: 1px solid;
     }
   }
 }

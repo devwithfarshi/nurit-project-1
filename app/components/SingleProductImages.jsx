@@ -15,15 +15,11 @@ const SingleProductImages = () => {
   return (
     <section>
       <div className="product_images flex items-center gap-[2.4rem]">
-        <div className="images_preview h-[55rem] w-[55rem]">
+        <div className="images_preview w-[55rem]">
           <Image src={img} width={592} height={0} alt="product" />
         </div>
         <div>
-          <FaAngleUp
-            strokeWidth={4}
-            className=" mx-auto mb-[4rem] cursor-pointer"
-            fill="#949494"
-            fontSize={24}
+          <div
             onClick={() => {
               const findIndex = images.findIndex((v) => v === img);
               setimg(
@@ -32,7 +28,14 @@ const SingleProductImages = () => {
                   : images[images.length - 1]
               );
             }}
-          />
+          >
+            <FaAngleUp
+              strokeWidth={4}
+              className=" mx-auto mb-[4rem] cursor-pointer"
+              fill="#949494"
+              fontSize={24}
+            />
+          </div>
 
           {images.map((value) => {
             return (
@@ -60,11 +63,7 @@ const SingleProductImages = () => {
               </div>
             );
           })}
-          <FaAngleDown
-            strokeWidth={4}
-            className=" mx-auto mb-[4rem] cursor-pointer"
-            fill="#949494"
-            fontSize={24}
+          <div
             onClick={() => {
               const findIndex = images.findIndex((v) => v === img);
               setimg(
@@ -73,7 +72,14 @@ const SingleProductImages = () => {
                   : images[0]
               );
             }}
-          />
+          >
+            <FaAngleDown
+              strokeWidth={4}
+              className=" mx-auto mt-[4rem] cursor-pointer"
+              fill="#949494"
+              fontSize={24}
+            />
+          </div>
         </div>
       </div>
       <div className="shear_links flex items-center">
