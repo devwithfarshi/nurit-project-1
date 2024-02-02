@@ -10,4 +10,4 @@ This is an e-commerce website design template crafted as a faithful replica of a
 
 ## Live link
 
-This project is live on this url:
+This project is live on this url: [Here](https://nurit-project-1.netlify.app/)

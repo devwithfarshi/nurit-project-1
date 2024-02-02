@@ -36,9 +36,9 @@ const Navbar = () => {
                 <Image src={wishlistIcon} alt="WishList" />
                 <p className="hidden sm:block">Wishlist</p>
               </div>
-              <div className="nav_actions flex items-center gap-[.6rem] relative">
+              <div className="nav_actions flex items-center gap-[.4rem] relative">
                 <Image src={cartIcon} alt="cart" />
-                <p className=" hidden sm:block">My Cart</p>
+                <p className="hidden sm:block">My Cart</p>
                 <span className="cart_item_couter sm:bg-red bg-secondary h-[2rem] w-[2rem] rounded-full text-center sm:static absolute top-[0rem] right-[-0.3rem]">
                   1
                 </span>

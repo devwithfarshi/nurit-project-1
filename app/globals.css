@@ -135,6 +135,7 @@ ul.navMenu {
     font-weight: 500;
     color: var(--light-dark);
     text-transform: uppercase;
+
     &:hover {
       .navbarDropDown {
         top: 110%;
